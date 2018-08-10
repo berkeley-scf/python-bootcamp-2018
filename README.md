@@ -1,7 +1,7 @@
 # python-bootcamp-2018
 Materials for Python short course for incoming Statistics grad students.
 
-The workshop content is in Markdown in python.md with a rendered HTML version in python.html. The mini-project material is in project.md/project.html.
+The workshop content is in Markdown in python.md with a rendered HTML version in python.html and an IPython notebook version in python.ipynb. The mini-project material is in project.md/project.html/project.ipynb.
 
 ## Instructions for accessing Python
 
