@@ -1,15 +1,17 @@
 # python-bootcamp-2018
 Materials for Python short course for incoming Statistics grad students.
 
-The workshop content is in Markdown in python.md with a rendered HTML version in python.html and an IPython notebook version in python.ipynb. The mini-project material is in project.md/project.html/project.ipynb.
+## Logistics
 
-## Instructions for accessing Python
+The workshop content is in Markdown in python.md with a rendered HTML version in python.html and an IPython notebook version in python.ipynb. The mini-project material is in project.md/project.html/project.ipynb.
 
 Schedule:
 
  - 1 pm - 5 pm Wednesday Aug. 15 in Evans 330
  - 10 am - 5 pm Thursday Aug. 16 in Evans 330 (with a one-hour break for lunch)
- 
+
+## Instructions for accessing Python
+
 The only, but important, preparation in advance of the bootcamp is to make sure you have access to Python, with key packages (numpy, pandas, matplotlib, statsmodels) that we'll use during the bootcamp.
 
 We'll be using IPython 3, but whether you run IPython through the command line or via a Jupyter Notebook doesn't matter. So the key thing is just to make sure that you can use IPython, in particular, version 3 of Python.
