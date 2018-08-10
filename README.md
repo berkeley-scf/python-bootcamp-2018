@@ -5,6 +5,11 @@ Materials for Python short course for incoming Statistics grad students.
 
 The workshop content is in Markdown in python.md with a rendered HTML version in python.html and an IPython notebook version in python.ipynb. The mini-project material is in project.md/project.html/project.ipynb.
 
+To download the materials on your computer, you have two options:
+
+ - clone this Github repository (if you are familiar with Git)
+ - download [this zip file](https://github.com/berkeley-scf/python-bootcamp-2018/archive/master.zip)
+
 Schedule:
 
  - 1 pm - 5 pm Wednesday Aug. 15 in Evans 330
