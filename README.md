@@ -35,4 +35,3 @@ https://github.com/dlab-berkeley/python-intensive/blob/master/Install.md
  
 If you have any questions about the Statistical Computing Facility or getting an account please email trouble@stat.berkeley.edu. If you have questions about the bootcamp please don't hesitate to email me.
  
-We look forward to seeing you this morning. 
