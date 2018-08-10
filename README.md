@@ -24,7 +24,7 @@ https://github.com/dlab-berkeley/python-intensive/blob/master/Install.md
  2) SSH to any SCF Linux machine and run Python from the command line.
 
  3) Login to the [SCF JupyterHub](https://jupyter.stat.berkeley.edu)
- (using your SCF username and password) to access a Jupyter IPython notebook. Further instructions are [here](https://rawgit.com/berkeley-scf/python-bootcamp-2018/master/jupyter_instructions.md).
+ (using your SCF username and password) to access a Jupyter IPython notebook. Further instructions are [here](https://rawgit.com/berkeley-scf/python-bootcamp-2018/master/jupyter_instructions.html).
  
 If you have any questions about the Statistical Computing Facility or getting an account please email trouble@stat.berkeley.edu. If you have questions about the bootcamp please don't hesitate to email me.
  
