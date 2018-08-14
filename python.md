@@ -108,7 +108,7 @@ Unlike most languages, in Python indentation determines code blocks, including f
 
 The standard is one tab or 4 spaces, but you can use other spacing if it's consistent within a block of code.
 
-```python
+```
 a = 3
 ```
 
