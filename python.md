@@ -44,8 +44,8 @@ Resources
 
 Useful written references and tutorials:
 
--   <https://docs.python.org/2/index.html>
--   <https://docs.python.org/2/library/index.html>
+-   <https://docs.python.org/3/index.html>
+-   <https://docs.python.org/3/library/index.html>
 -   <https://scipy-lectures.github.io/>
 -   <https://docs.python.org/3/howto/pyporting.html>
 
@@ -233,7 +233,7 @@ Style
 Adopting standard coding conventions is good practice.
 
 -   <https://www.python.org/dev/peps/pep-0008/>
--   <https://docs.python.org/2/tutorial/controlflow.html#intermezzo-coding-style>
+-   <https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style>
 -   <https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt>
 -   <http://matplotlib.org/devel/coding_guide.html>
 
@@ -338,9 +338,9 @@ Data Structures
 
 Python has a number of basic data structure types that are widely used. There are both similarities and differences from basic data structures in R.
 
--   <https://docs.python.org/2/library/stdtypes.html>
--   <https://docs.python.org/2/tutorial/datastructures.html>
--   <https://docs.python.org/2/reference/datamodel.html>
+-   <https://docs.python.org/3/library/stdtypes.html>
+-   <https://docs.python.org/3/tutorial/datastructures.html>
+-   <https://docs.python.org/3/reference/datamodel.html>
 
 Numbers
 -------
@@ -400,7 +400,7 @@ math.cosh       math.frexp      math.modf
 **Exercises**
 
 - Using the section on "Built-in Types" from the [official "The Python
-Standard Library" reference](https://docs.python.org/2/library/index.html), figure out how to compute:
+Standard Library" reference](https://docs.python.org/3/library/index.html), figure out how to compute:
     1.  3 modulo 4,
     2.  $(\lceil \frac{3}{4} \rceil \times 4)^3$, 
     and
@@ -470,6 +470,7 @@ step, which you specify using the `start:stop:step` notation inside
 of square braces.
 
 ``` {.sourceCode .python}
+string.digits[1:5]
 string.digits[1:5:2]
 string.digits[1::2]
 string.digits[:5:-1]
@@ -646,9 +647,9 @@ Dictionaries
 Dictionaries are mutable, unordered collections of key-value pairs.
 
 ``` {.sourceCode .python}
-students = {"Jarrod Millman": [10, 11, 9], 
-            "Thomas Kluyver": [11, 9, 10], 
-            "Stefan van der Walt": [12, 9, 9]}
+students = {"Jarrod Millman": ['A', 'B+', 'A-'], 
+            "Thomas Kluyver": ['A-', 'A-'], 
+            "Stefan van der Walt": 'and now for something completely different'}
 students
 students.keys()
 students.values()
@@ -689,7 +690,7 @@ x.isdisjoint
 Built-in functions
 ==================
 
--   <https://docs.python.org/2/library/functions.html>
+-   <https://docs.python.org/3/library/functions.html>
 
 Python has several built-in functions (you can find a full list using
 the link above). We’ve already used a few (e.g.,
@@ -718,14 +719,14 @@ Some other useful built-in functions are  `abs()`, `all()`, `any()`, `dict()`,
 Control flow
 ============
 
--   <https://docs.python.org/2/tutorial/controlflow.html>
+-   <https://docs.python.org/3/tutorial/controlflow.html>
 
 If-then-else
 ------------
 
--   <https://docs.python.org/2/tutorial/controlflow.html#if-statements>
+-   <https://docs.python.org/3/tutorial/controlflow.html#if-statements>
 
-This is as expected. As previously noted, the indentation is important.
+This is as expected based on your experience with other languages. As previously noted, the indentation is important.
 
 ``` {.sourceCode .python}
 x = 2
@@ -748,8 +749,8 @@ if a>=4:
 For-loops (and list comprehension)
 ----------------------------------
 
--   <https://docs.python.org/2/tutorial/controlflow.html#for-statements>
--   <https://docs.python.org/2/whatsnew/2.0.html#list-comprehensions>
+-   <https://docs.python.org/3/tutorial/controlflow.html#for-statements>
+-   <https://docs.python.org/3/whatsnew/2.0.html#list-comprehensions>
 
 Here's basic use of a for loop. Once again indentation is critical, in this case for indicating where the loop ends.
 
@@ -761,8 +762,9 @@ for x in [1,2,3,4]:
     y = x*2
     print(y, end=" ")
 
-for x in [1,2,3,4]:
-    y = x*2
+print("\n")
+for x in range(30):
+    y = x
 print(y, end=" ")
 ```
 
@@ -773,8 +775,8 @@ handle this task.
 ``` {.sourceCode .python}
 [x for x in range(4)]
 
-y = [-4, 3, -1, 2.5, 7]
-[x for x in y if x > 0]  # list comprehension
+vals = [-4, 3, -1, 2.5, 7]
+[x for x in vals if x > 0]  # list comprehension
 
 import string
 letters = string.ascii_lowercase
@@ -784,7 +786,7 @@ letters = string.ascii_lowercase
 # better style:
 [letter for index, letter in enumerate(letters) if index > 13]
 
-x = zip(['clinton', 'bush', 'obama', 'trump'], ['D', 'R', 'D', 'R'])
+x = zip(['clinton', 'bush', 'obama', 'trump'], ['Dem', 'Rep', 'Dem', 'Rep'])
 for pres,party in x:
     print(pres, party)
 
@@ -806,7 +808,7 @@ for pres,party in x:
 Functions
 ===============
 
--   <https://docs.python.org/2/tutorial/controlflow.html#defining-functions>
+-   <https://docs.python.org/3/tutorial/controlflow.html#defining-functions>
 
 Here's an example that illustrates both positional arguments (always first) and named arguments.
 
@@ -842,7 +844,7 @@ Data formats
 CSV
 ---
 
--   <https://docs.python.org/2/library/csv.html>
+-   <https://docs.python.org/3/library/csv.html>
 
 The Python standard library provides a package for reading and writing
 CSV files. This is a somewhat low-level library, so in practice you will
@@ -851,7 +853,7 @@ often use NumPy, SciPy, or Pandas CSV functionality.
 JSON
 ----
 
--   <https://docs.python.org/2/library/json.html>
+-   <https://docs.python.org/3/library/json.html>
 
 However the JSON package in the standard library is much more useful.
 
@@ -863,7 +865,7 @@ x = {"name": "Jarrod", "department": "Biostatistics"}
 with open("tmp.json", "w") as outfile: 
     json.dump(x, outfile)
 
-cat tmp.json  # special IPython functionality
+# cat tmp.json  # special IPython functionality
 
 with open("tmp.json") as infile:
     y = json.load(infile)
@@ -887,7 +889,7 @@ guess that you want it to call out to the underlying operating system.
 Standard library
 ================
 
--   <https://docs.python.org/2/tutorial/stdlib.html>
+-   <https://docs.python.org/3/tutorial/stdlib.html>
 
 Python provides a wealth of functionality in its huge standard library.
 We’ve already seen several packages in the standard library (e.g., math, csv, json). If you need some
@@ -898,13 +900,16 @@ Here are a couple packages that you may find useful.
 os
 --
 
--   <https://docs.python.org/2/tutorial/stdlib.html#operating-system-interface>
+-   <https://docs.python.org/3/tutorial/stdlib.html#operating-system-interface>
 
 ``` {.sourceCode .python}
 import os
 
 os.getcwd()
 pwd           # IPython operating system call
+
+os.chdir('..')
+os.getcwd()
 ```
 
 **Exercise**
@@ -1061,7 +1066,7 @@ class Rectangle(object):
         self.set_diagonal()
         Rectangle.counter += 1
     def __repr__(self):
-        return("{0} by {1}".format(self.height, self.width))        
+        return("{0} by {1} rectangle".format(self.height, self.width))        
     def area(self):
         return(self.height*self.width)
     def set_diagonal(self):
