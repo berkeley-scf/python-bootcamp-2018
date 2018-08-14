@@ -72,12 +72,13 @@ A notebook should open in your browser.
 
 Alternatively you may be able to access Jupyter notebooks through a service called Jupyterhub on the SCF or other systems (e.g., the Savio campus cluster).
 
-Side note: to have all output (not just the last result) printed in the Jupyter notebook, you can use this in a cell in your notebook.
+Side note: to have all output (not just the last result) printed in the Jupyter notebook, you can run this in a cell in your notebook.
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
+
 
 Python 2 vs. 3
 --------------------------
@@ -108,9 +109,6 @@ Unlike most languages, in Python indentation determines code blocks, including f
 
 The standard is one tab or 4 spaces, but you can use other spacing if it's consistent within a block of code.
 
-```
-a = 3
-```
 
 ``` {.sourceCode .python}
 a = 3
@@ -164,7 +162,7 @@ In particular, variables can be bound to an object of one type and then
 reassigned to an object of another type without error.
 
 ``` {.sourceCode .python}
-a = 'foo'
+a = 'foobar'
 a
 a * 4
 len(a)
@@ -213,12 +211,21 @@ As in R, you can also load in additional supporting packages for extra functiona
 Here are some examples of importing Python packages:
 
 ``` {.sourceCode .python}
-import math
 from math import cos
+cos(0)
+sin(0)
+import math
+math.cos(0)
+math.sin(0)
 import numpy as np
+numpy.arctan(1)
+np.arctan(1)
 import scipy as sp
 import matplotlib.pyplot as plt
 ```
+
+The different packages have different namespaces, which helps to avoid problems with
+different packages using the same names for different functions.
 
 Style 
 -----
@@ -417,6 +424,8 @@ Objects have methods that can be used on them and attributes (member data) that 
 Note that even the basic numeric structures behave like objects. We can use tab completion to see what methods are available for an object and what member data are part of an object.
 
 ``` {.sourceCode .python}
+x = 3.0
+type(x)
 x.
 # x.as_integer_ratio  x.hex               x.real
 # x.conjugate         x.imag              
@@ -437,42 +446,43 @@ is a sequence. Python has several sequence types including strings,
 tuples, and lists. Sequence types share some common functionality, which
 we can demonstrate with strings.
 
--   **Indexing** 
+**Indexing** 
 
-    To see how indexing works in Python let’s use the
-    string containing the digits 0 through 9.
+To see how indexing works in Python let’s use the
+string containing the digits 0 through 9.
 
-    ``` {.sourceCode .python}    
-    import string
-    string.digits 
-    string.digits[1]
-    string.digits[-1]
-    ```
+``` {.sourceCode .python}    
+import string
+string.digits 
+string.digits[1]
+string.digits[-1]
+```
 
-    Note that indexing starts at 0 (unlike R and Fortran, but like C).
-    Also negative integers index starting from the end of the sequence.
-    You can find the length of a sequence using the *len* function.
+Note that indexing starts at 0 (unlike R and Fortran, but like C).
+Also negative integers index starting from the end of the sequence.
+You can find the length of a sequence using the *len* function.
 
--   **Slicing** 
-    Slicing allows you to select a subset of a string (or
-    any sequence) by specifying start and stop indices as well as a
-    step, which you specify using the `start:stop:step` notation inside
-    of square braces.
+**Slicing** 
 
-    ``` {.sourceCode .python}
-    string.digits[1:5:2]
-    string.digits[1::2]
-    string.digits[:5:-1]
-    string.digits[1:5:-1]
-    string.digits[-3:-7:-1]
-    ```
+Slicing allows you to select a subset of a string (or
+any sequence) by specifying start and stop indices as well as a
+step, which you specify using the `start:stop:step` notation inside
+of square braces.
 
--   **Subsequence testing**
+``` {.sourceCode .python}
+string.digits[1:5:2]
+string.digits[1::2]
+string.digits[:5:-1]
+string.digits[1:5:-1]
+string.digits[-3:-7:-1]
+```
 
-    ``` {.sourceCode .python}    
-    '23' in string.digits 
-    '25' not in string.digits
-    ```
+**Subsequence testing**
+
+``` {.sourceCode .python}    
+'23' in string.digits 
+'25' not in string.digits
+```
 
 **String methods**
 
