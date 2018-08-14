@@ -70,7 +70,14 @@ jupyter notebook
 
 A notebook should open in your browser.
 
-Alternatively you may be able to access Jupyter notebooks through a service called Jupyterhub on the SCF or other systems (e.g., the Savio campus cluster). 
+Alternatively you may be able to access Jupyter notebooks through a service called Jupyterhub on the SCF or other systems (e.g., the Savio campus cluster).
+
+Side note: to have all output (not just the last result) printed in the Jupyter notebook, you can use this in a cell in your notebook.
+
+```python
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
+```
 
 Python 2 vs. 3
 --------------------------
@@ -101,6 +108,10 @@ Unlike most languages, in Python indentation determines code blocks, including f
 
 The standard is one tab or 4 spaces, but you can use other spacing if it's consistent within a block of code.
 
+```python
+a = 3
+```
+
 ``` {.sourceCode .python}
 a = 3
  a = 3  # this will cause an IndentationError, at least in Python itself, if not IPython
@@ -124,7 +135,7 @@ Objects
 -------
 
 Everything is an object in Python. Roughly, this means that it can be
-tagged with a variable and passed as an argument to a function. Often it
+tagged with a variable (i.e., given a name) and passed as an argument to a function. Often it
 means that everything has *attributes* and *methods*.
 
 Certain objects in Python are mutable (e.g., lists, dictionaries), while
