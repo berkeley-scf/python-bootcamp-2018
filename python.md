@@ -296,6 +296,8 @@ Docstrings are an important part of Python. A docstring is a character string th
 
 **Exercises**
 
+Note that `?` and `??` only work in IPython (or a Jupyter notebook). For help in plain Python, use `help(np.ndim)`.
+
 -   What happens if you type `np.ndim??` (i.e., use two question marks)?
 -   What does `np.ndim()` do? How does it execute under the hood?
     Consider why the following uses of *ndim* both work.
@@ -1020,7 +1022,7 @@ ndat.apply(lambda col: col.max() - col.min())
 Now let's see the sort of split-apply-combine functionality that is popular in dplyr and related R packages.
 
 ``` {.sourceCode .python}
-dat2007 = dat[dat.year == 2007].copy()  # .copy() ensures a (shallow) copy is made
+dat2007 = dat[dat.year == 2007].copy()  
 
 dat2007.groupby('continent', as_index=False).mean()
 
