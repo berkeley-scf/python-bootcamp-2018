@@ -1069,7 +1069,9 @@ class Rectangle(object):
         Rectangle.counter += 1
     def __repr__(self):
         return("{0} by {1} rectangle".format(self.height, self.width))        
-    def area(self):
+    def area(self, verbose = False):
+	if verbose:
+	    print('Computing the area... ')
         return(self.height*self.width)
     def set_diagonal(self):
         self.diagonal = pow(self.height**2 + self.width**2, 0.5)
