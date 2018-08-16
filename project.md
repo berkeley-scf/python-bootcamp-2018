@@ -11,14 +11,14 @@ The goal of the project is to analyze the tweeting behavior of the 100 US Senato
 
 The goal of the project questions is to guide you through the steps of getting the data, processing and cleaning it, putting it in a format that makes it easier to analyze and then doing some basic analysis. The last few questions ask you to see if whether a senator mentions a president or presidential candidate depends on the party that the senator is part of. For example, do Democratic senators mention Barack Obama in their tweets more or less than Republican senators? 
 
-The file **fetch_senator_tweets.py** downloads tweets using the Python twitter package to interact with Twitter's API. You will only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.).
+For background information only: The file **project/fetch_senator_tweets.py** downloads tweets using the Python twitter package to interact with Twitter's API. You will only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.).
 
-I've already run the code and downloaded the data for you.  The downloaded information on the senators' twitter accounts is in *senators-list.json*, while the downloaded tweets are in *timelines.json*. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request. *timelines.json* is too big to put in the Github repository. You can find it at <http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json>.
+I've already run the code mentioned above and downloaded the data for you.  The downloaded information on the senators' twitter accounts is in *project/senators-list.json* in the Github repository, while the downloaded tweets are in *timelines.json*.  *timelines.json* is too big to put in the Github repository. You can find it at <http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json>. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.
 
 Questions
 ===========
 
-1. Load the *senators-list.json* and *timelines.json* files as objects called *senators* and *timelines*.
+1. Load the *senators-list.json* and *timelines.json* files into Python as objects called *senators* and *timelines*.
 
 2. What type of datastructure is *timelines*? How many timelines are there? What does each timeline correspond to?
 
@@ -46,14 +46,14 @@ Questions
     Note that the function I've provided is a bit buggy - it has some problems with some tweets. If your goal is to convert the tweet into a discrete set of words, what is going wrong here? Fix up and extend the example function.
 
 
-8. Use the following file to create a list, called *stopwords*, that contains common english words.  <http://www.textfixer.com/resources/common-english-words.txt>.
+8. Use the following file to create a list, called *stopwords*, that contains common english words: <http://www.textfixer.com/resources/common-english-words.txt>.
 Make sure to pull the data into Python by writing Python code to download and suck the data into Python.
 
 9. Write a function, called *tokenize*, which takes a tweet, cleans it, and removes all punctuation and stopwords.
 
 10. Create a list of lists, tweets_content, using your *tokenize* function.
 
-11. Create a list, *tokens*, where all 200 of each senator's tweets are made into a single string.
+11. Create a list, *tokens*, where all 200 of each senator's tweets are made into a single string. Hint: this syntax might be useful: `" ".join(my_list_of_strings)`.
 
 12. Create a Pandas dataFrame with the following columns: senator name or handle, party of the senator, and number of times a prominent politician is mentioned in each senator's tweets. You might count the number of 'Obama', 'Trump', or 'Clinton' references.
 
